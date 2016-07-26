@@ -10,7 +10,9 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'figaro'
+gem 'omniauth-oauth2'
 gem 'omniauth-linkedin-oauth2'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
@@ -22,6 +24,7 @@ group :development, :test do
   gem 'pry'
   gem 'rspec-rails'
   gem 'simplecov'
+  gem 'capybara'
 end
 
 group :development do
