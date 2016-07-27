@@ -20,13 +20,11 @@ RSpec.feature "user logs in with linkedin" do
   end
 
   scenario "they are authenicated through linkedin" do
-    # user = create(:user)
     stubbed_user_data
     visit '/'
     click_link "Log In with LinkedIn"
 
-    # expect(current_path).to eq user_show(user)
-    # expect(page).to have_content "username"
+    expect(current_path).to eq user_path(User.first)
     expect(page).to have_content "Log Out"
     expect(page).not_to have_content "Log In with LinkedIn"
   end
