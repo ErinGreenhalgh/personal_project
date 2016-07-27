@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'figaro'
 gem 'oauth2'
 gem 'omniauth-linkedin-oauth2'
+gem 'bootstrap-sass', '~> 3.2.0'
 
 
 # Use Redis adapter to run Action Cable in production
