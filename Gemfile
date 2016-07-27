@@ -10,7 +10,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'figaro'
-gem 'omniauth-oauth2'
+gem 'oauth2'
 gem 'omniauth-linkedin-oauth2'
 
 
