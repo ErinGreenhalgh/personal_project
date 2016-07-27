@@ -3,12 +3,16 @@
   <head>
     <title>PersonalProject</title>
     <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
-
-  <body>
-    <%= yield %>
-  </body>
+  <div class="background">
+    <div class="container">
+      <body>
+        <%= yield %>
+      </body>
+    </div>
+  </div>
 </html>

@@ -1,5 +1,9 @@
-<% if current_user %>
-  <%= link_to "Log Out", logout_path, method: :delete %>
-<% else %>
-  <%= link_to "Log In with LinkedIn", linkedin_login_path %>
-<% end %>
+<div class="container-fluid">
+  <ul class="nav navbar-nav navbar-right">
+    <% if current_user %>
+      <li class="nav-text"><%= link_to "Log Out", logout_path, method: :delete %></li>
+    <% else %>
+      <li class="nav-text"><%= link_to "Log In with LinkedIn", linkedin_login_path %></li>
+    <% end %>
+  </ul>
+</div>
