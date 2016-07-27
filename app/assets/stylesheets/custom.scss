@@ -1,20 +1,22 @@
 .background {
   // background-color:#3C0991;
   background-color:#3B338F;
+  height: 100vh;
 }
-
-// .welcome-page {
-//   background-color: #4C0C7C
-// }
 
 .welcome-content {
   font-family: 'Work Sans', sans-serif;
   color: white;
 }
 
+// ==================
+// Navbar
 .nav-text {
   font-family: 'Work Sans', sans-serif;
-  color: white;
 }
 
-// make clicked link in navbar remain white
+a.nav-text:visited {
+  font-family: 'Work Sans', sans-serif;
+  color: white;
+  text-decoration: none;
+}
