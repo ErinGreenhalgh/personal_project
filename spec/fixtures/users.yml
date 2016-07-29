@@ -1,0 +1,4 @@
+erin:
+  uid: 1234
+  name: Erin
+  oauth_token: ENV["user_token"]
