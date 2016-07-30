@@ -9,7 +9,7 @@ RSpec.feature "user sees their profile summary" do
       visit "/erin/profile_summary"
 
       within("#profile-summary") do
-        expect(page).to have_content user.profile_summary
+        expect(page).to have_content user.profile_summary.content
       end
     end
   end
