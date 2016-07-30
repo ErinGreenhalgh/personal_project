@@ -51,6 +51,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    cf-autoconfig (0.2.1)
+      cf-runtime (= 0.2.0)
+    cf-runtime (0.2.0)
     coderay (1.1.1)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
@@ -148,6 +151,11 @@ GEM
       nokogiri (~> 1.6.0)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.5)
+    rails_stdout_logging (0.0.5)
     railties (5.0.0)
       actionpack (= 5.0.0)
       activesupport (= 5.0.0)
@@ -226,6 +234,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.2.0)
   byebug
   capybara
+  cf-autoconfig (~> 0.2.1)
   coffee-rails (~> 4.2)
   figaro
   jbuilder (~> 2.5)
@@ -237,6 +246,7 @@ DEPENDENCIES
   pry
   puma (~> 3.0)
   rails (~> 5.0.0)
+  rails_12factor
   rspec-rails
   sass-rails (~> 5.0)
   simplecov
@@ -245,6 +255,9 @@ DEPENDENCIES
   vcr
   web-console
   webmock
+
+RUBY VERSION
+   ruby 2.3.0p0
 
 BUNDLED WITH
    1.12.5

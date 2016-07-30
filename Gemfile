@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
@@ -13,6 +14,8 @@ gem 'figaro'
 gem 'oauth2'
 gem 'omniauth-linkedin-oauth2'
 gem 'bootstrap-sass', '~> 3.2.0'
+gem "cf-autoconfig", "~> 0.2.1"
+gem 'rails_12factor', group: :production
 
 
 # Use Redis adapter to run Action Cable in production
