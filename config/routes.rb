@@ -5,4 +5,9 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy', as: :logout
 
   get '/:username' => "users#show", as: :user
+
+  scope '/:username' do
+    get '/profile_summary' => 'profile_summaries#show', as: :profile_summary
+  end
+
 end
