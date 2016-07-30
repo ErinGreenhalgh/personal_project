@@ -1,4 +1,6 @@
-class ProfileSummary
+class ProfileSummary < ActiveRecord::Base
+  belongs_to :user
+
   attr_reader :summary
 
   def initialize(profile_data)
