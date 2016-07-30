@@ -24,7 +24,7 @@ RSpec.feature "user logs in with linkedin" do
     visit '/'
     click_link "Log In with LinkedIn"
 
-    expect(current_path).to eq user_path(User.first)
+    expect(current_path).to eq "/john"
     expect(page).to have_content "Log Out"
     expect(page).not_to have_content "Log In with LinkedIn"
   end
