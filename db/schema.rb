@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160727011100) do
+ActiveRecord::Schema.define(version: 20160730033910) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "profile_summaries", force: :cascade do |t|
+    t.text    "content"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_profile_summaries_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.datetime "created_at",  null: false
@@ -21,6 +27,9 @@ ActiveRecord::Schema.define(version: 20160727011100) do
     t.string   "uid"
     t.string   "name"
     t.string   "oauth_token"
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
+  add_foreign_key "profile_summaries", "users"
 end

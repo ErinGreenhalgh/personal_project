@@ -24,3 +24,6 @@
 
 #Ignore public assets
 /public/assets/*
+
+#Ignore VCR cassettes
+/spec/cassettes/*
