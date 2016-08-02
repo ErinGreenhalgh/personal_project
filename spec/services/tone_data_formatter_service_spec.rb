@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe "tone data formatter service" do
   fixtures :users, :profile_summaries
 
-  let(:user) { users(:erin) }
+  let(:user)      { users(:erin) }
   let(:formatter) { ToneDataFormatterService.new }
 
   it "isolates an array of tone categories" do
@@ -35,11 +35,11 @@ RSpec.describe "tone data formatter service" do
   end
 
   it "finds social attributes" do
-    attributes = {"openness_big5"          => 190,
-                  "conscientiousness_big5" => 66,
-                  "extraversion_big5"      => 904,
-                  "agreeableness_big5"     => 320,
-                  "emotional_range_big5"   => 489}
+    attributes = {"openness"          => 190,
+                  "conscientiousness" => 66,
+                  "extraversion"      => 904,
+                  "agreeableness"     => 320,
+                  "emotional_range"   => 489}
     expect(formatter.social_attributes(user)).to eq attributes
   end
 end

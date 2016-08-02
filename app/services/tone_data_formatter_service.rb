@@ -38,7 +38,14 @@ class ToneDataFormatterService
     format_attributes(language_tones(user)["tones"])
   end
 
+  def format_social_tone_name(tone)
+    tone[0..-6]
+  end
+
   def social_attributes(user)
-    format_attributes(social_tones(user)["tones"])
+    data = format_attributes(social_tones(user)["tones"])
+    data.map do |key, value|
+      [format_social_tone_name(key), value]
+    end.to_h
   end
 end
