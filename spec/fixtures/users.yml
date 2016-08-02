@@ -3,4 +3,4 @@ erin:
   name: Erin Greenhalgh
   first_name: Erin
   last_name: Greenhalgh
-  oauth_token: ENV["user_token"]
+  oauth_token: <%= ENV["user_token"] %> 
