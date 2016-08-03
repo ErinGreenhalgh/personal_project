@@ -3,7 +3,7 @@ class ProfileSummary < ActiveRecord::Base
   has_many :reports
 
   def self.get_text(user)
-    data = LinkedinService.new.get_profile_information(user.oauth_token)
+    data = LinkedinService.new(user.oauth_token).get_profile_information
     ProfileSummary.create!(content: data["summary"], user: user)
   end
 end
