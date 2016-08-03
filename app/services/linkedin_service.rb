@@ -1,12 +1,17 @@
 class LinkedinService
 
-  def initialize
-    @connection = Faraday.new("https://api.linkedin.com")
+  def initialize(oauth_token)
+    @_connection = Faraday.new("https://api.linkedin.com")
+    @_connection.headers["Authorization"] = "Bearer #{oauth_token}"
   end
 
-  def get_profile_information(oauth_token, profile_field="summary", format="json")
-    @connection.headers = {"Authorization" => "Bearer #{oauth_token}"}
-    response = @connection.get("/v1/people/~:(#{profile_field})?format=#{format}")
+  def get_profile_information(profile_field="summary", format="json")
+    response = _connection.get("/v1/people/~:(#{profile_field})?format=#{format}")
     JSON.parse(response.body)
+  end
+
+  private
+  def _connection
+    @_connection
   end
 end
