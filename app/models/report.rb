@@ -3,4 +3,6 @@ class Report < ApplicationRecord
   has_one :emotion_tone
   has_one :language_tone
   has_one :social_tone
+
+  validates :text, presence: true
 end
