@@ -19,27 +19,27 @@ RSpec.describe "tone data formatter service" do
   end
 
   it "finds emotion attributes" do
-    attributes = {"anger"   => 429,
-                  "disgust" => 231,
-                  "fear"    => 288,
-                  "joy"     => 28,
-                  "sadness" => 620}
+    attributes = {"anger"   => 369,
+                  "disgust" => 141,
+                  "fear"    => 82,
+                  "joy"     => 525,
+                  "sadness" => 115}
     expect(formatter.emotion_attributes(user)).to eq attributes
   end
 
   it "finds language attributes" do
-    attributes = {"analytical" => 0,
-                  "confident"  => 0,
-                  "tentative"  => 715}
+    attributes = {"analytical" => 472,
+                  "confident"  => 963,
+                  "tentative"  => 0}
     expect(formatter.language_attributes(user)).to eq attributes
   end
 
   it "finds social attributes" do
-    attributes = {"openness"          => 190,
-                  "conscientiousness" => 66,
-                  "extraversion"      => 904,
-                  "agreeableness"     => 320,
-                  "emotional_range"   => 489}
+    attributes = {"openness"          => 53,
+                  "conscientiousness" => 936,
+                  "extraversion"      => 194,
+                  "agreeableness"     => 896,
+                  "emotional_range"   => 973}
     expect(formatter.social_attributes(user)).to eq attributes
   end
 end
