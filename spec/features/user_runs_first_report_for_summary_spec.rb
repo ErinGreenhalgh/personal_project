@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 RSpec.feature "user runs first report for summary" do
-  fixtures :users, :profile_summaries, :reports, :language_tones, :emotion_tones, :social_tones
+  fixtures :users, :profile_summaries
   scenario "by clicking the Analyze button" do
     VCR.use_cassette("profile_summary") do
       user = users(:erin)
       summary = profile_summaries(:sample)
-  
+
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       visit profile_summary_path(summary)
