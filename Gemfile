@@ -30,6 +30,7 @@ group :development, :test do
   gem 'simplecov'
   gem 'capybara'
   gem 'launchy'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development do
@@ -40,6 +41,7 @@ end
 group :test do
   gem 'vcr'
   gem 'webmock'
+  gem 'database_cleaner'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
