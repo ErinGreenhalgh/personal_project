@@ -1,9 +1,9 @@
 applications:
 - path: .
-  memory: 1GB
+  memory: 2GB
   instances: 1
   domain: mybluemix.net
   name: WriteLink
   host: WriteLink
   disk_quota: 1024M
-  command: bundle exec rake db:migrate && bundle exec rails s -p $PORT
+  command: rake db:create db:migrate

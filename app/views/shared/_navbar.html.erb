@@ -1,9 +1,14 @@
 <div class="container-fluid">
+  <%= render partial: "shared/navbar_brand" %>
   <ul class="nav navbar-nav navbar-right">
     <% if current_user %>
       <li class="nav-text"><%= link_to "Log Out", logout_path, method: :delete, class: "nav-text" %></li>
     <% else %>
       <li class="nav-text"><%= link_to "Log In with LinkedIn", linkedin_login_path, class: "nav-text" %></li>
     <% end %>
+  </ul>
+  <ul class="nav navbar-nav navbar-center">
+    <li class="nav-text"> <%= link_to "Profile Summary", profile_summary_path %></li>
+    <li class="nav-text"> <%= link_to "Analysis Reports", reports_path %></li>
   </ul>
 </div>

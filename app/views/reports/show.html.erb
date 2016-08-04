@@ -1,30 +1,39 @@
 <div id="report">
   <h1>Version <%= @report.id %></h1>
+  <h3>Profile Summary Text: </h3>
   <p> <%= @report.text %></p>
 
-  <div id="emotion">
-    <h1>Emotion Tones</h1>
-    Anger: <%= @report.emotion_tone.anger %>
-    Disgust: <%= @report.emotion_tone.disgust %>
-    Fear: <%= @report.emotion_tone.fear %>
-    Joy: <%= @report.emotion_tone.joy %>
-    Sadness: <%= @report.emotion_tone.sadness %>
-  </div>
+  <div class="row">
+    <div id="emotion" class="col-md-3 well well-sm">
+      <h3>Emotion Tones:</h3>
+      <p>Anger: <%= @report.emotion_tone.anger %><br>
+      Disgust: <%= @report.emotion_tone.disgust %><br>
+      Fear: <%= @report.emotion_tone.fear %><br>
+      Joy: <%= @report.emotion_tone.joy %><br>
+      Sadness: <%= @report.emotion_tone.sadness %></p>
+    </div>
+    <div class="col-md-1">
 
-  <div id="language">
-    <h1>Language Styles</h1>
-    Analytical: <%= @report.language_tone.analytical %>
-    Confident: <%= @report.language_tone.confident %>
-    Tentative: <%= @report.language_tone.tentative %>
-  </div>
+    </div>
 
-  <div id="social">
-    <h1>Social Tendencies</h1>
-    Openness: <%= @report.social_tone.openness %>
-    Conscientiousness: <%= @report.social_tone.conscientiousness %>
-    Extraversion: <%= @report.social_tone.extraversion %>
-    Agreeableness: <%= @report.social_tone.agreeableness %>
-    Emotional Range: <%= @report.social_tone.emotional_range %>
+    <div id="language" class="col-md-3 well well-sm">
+      <h3>Language Styles:</h3>
+      <p> Analytical: <%= @report.language_tone.analytical %><br>
+      Confident: <%= @report.language_tone.confident %><br>
+      Tentative: <%= @report.language_tone.tentative %></p>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+
+    <div id="social" class="col-md-3 well well-sm">
+      <h3>Social Tendencies:</h3>
+      <p>Openness: <%= @report.social_tone.openness %><br>
+      Conscientiousness: <%= @report.social_tone.conscientiousness %><br>
+      Extraversion: <%= @report.social_tone.extraversion %><br>
+      Agreeableness: <%= @report.social_tone.agreeableness %><br>
+      Emotional Range: <%= @report.social_tone.emotional_range %></p>
+    </div>
   </div>
 
 </div>

@@ -1,0 +1,7 @@
+<%#= render partial: "shared/navbar" %>
+<h1>Analysis Reports</h1>
+  <ul>
+    <% @reports.each do |report| %>
+      <li>  <%= link_to "Version #{report.id}", report_path(report) %></li>
+    <% end  %>
+  </ul>
