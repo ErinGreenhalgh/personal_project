@@ -1,9 +1,17 @@
-h1, h2, h3, h4 {
+h1 {
   font-family: 'Work Sans', sans-serif;
+  color: #d50f67 !important;
 }
+
+h2, h3, h4 {
+  font-family: 'Work Sans', sans-serif;
+  color: #474747;
+}
+
 
 p {
   font-family: 'Open Sans', sans-serif;
+  color: #6B6B6B;
 }
 
 .background {
@@ -26,4 +34,11 @@ a.nav-text:visited {
   font-family: 'Work Sans', sans-serif;
   color: white;
   text-decoration: none;
+}
+
+// ==================
+// Report
+
+#emotion, #language, #social {
+  background-color: white; 
 }
