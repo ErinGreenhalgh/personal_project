@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   end
 
   scope '/profile_summary' do
-    resources :reports, only: [:show]
+    resources :reports, only: [:show, :index]
   end
 
 end
