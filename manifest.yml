@@ -1,0 +1,9 @@
+applications:
+- path: .
+  memory: 2GB
+  instances: 1
+  domain: mybluemix.net
+  name: WriteLink
+  host: WriteLink
+  disk_quota: 1024M
+  command: rake db:create db:migrate
