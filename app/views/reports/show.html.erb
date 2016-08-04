@@ -1,0 +1,30 @@
+<div id="report">
+  <h1>Version <%= @report.id %></h1>
+  <p> <%= @report.text %></p>
+
+  <div id="emotion">
+    <h1>Emotion Tones</h1>
+    Anger: <%= @report.emotion_tone.anger %>
+    Disgust: <%= @report.emotion_tone.disgust %>
+    Fear: <%= @report.emotion_tone.fear %>
+    Joy: <%= @report.emotion_tone.joy %>
+    Sadness: <%= @report.emotion_tone.sadness %>
+  </div>
+
+  <div id="language">
+    <h1>Language Styles</h1>
+    Analytical: <%= @report.language_tone.analytical %>
+    Confident: <%= @report.language_tone.confident %>
+    Tentative: <%= @report.language_tone.tentative %>
+  </div>
+
+  <div id="social">
+    <h1>Social Tendencies</h1>
+    Openness: <%= @report.social_tone.openness %>
+    Conscientiousness: <%= @report.social_tone.conscientiousness %>
+    Extraversion: <%= @report.social_tone.extraversion %>
+    Agreeableness: <%= @report.social_tone.agreeableness %>
+    Emotional Range: <%= @report.social_tone.emotional_range %>
+  </div>
+
+</div>

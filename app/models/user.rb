@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_one :profile_summary
-  
+
   def self.from_omniauth(auth_hash)
     user = User.find_or_create_by(uid: auth_hash["uid"])
     user.update_attributes(

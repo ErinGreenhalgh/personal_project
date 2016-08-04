@@ -1,6 +1,7 @@
-<div id="profile-summary">
+<div class="profile-summary-form">
   <h1>Profile Summary</h1>
-  <p>
-    <%= @summary.content %>
-  </p>
+  <%= form_for @summary, url: { action: "create_report" } do |f| %>
+    <%= f.text_area :content, readonly: "readonly", id: "profile-summary" %>
+    <%= f.submit "Analyze" %>
+  <% end %>
 </div>
