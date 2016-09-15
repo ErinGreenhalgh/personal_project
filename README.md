@@ -1,6 +1,6 @@
 #WriteLink
 ###Background:
-In my past experience working with writers in both an academic and a business setting, I have found that people often have trouble assessing how well their writing communicates what they intend and therefore have trouble editing and improving their writing. This app helps address this problem by providing users with data about the tones present in their writing so users can 
+In my past experience working with writers in both an academic and a business setting, I have found that people often have trouble assessing how well their writing communicates what they intend and therefore have trouble editing and improving their writing. This app helps address this problem by providing users with data about the tones present in their writing so users can have more concrete details about the effectiveness of their writing. 
 
 ###Features:
 * Users log in through LinkedIn Oauth
@@ -14,5 +14,10 @@ In my past experience working with writers in both an academic and a business se
 * **See comparison reports:** It will be most useful to users to see how their analysis differs between drafts of their summary. Users will be able to choose two reports and see the different between them. For example, they could see that their edit improved their confidence score by 15%. 
 
 ###Running Locally:
-
+1. Clone this repo
+2. Run `bundle install` to install necessary gems
+3. Set up the database: `rake db:create db:migrate`
+3. Run `rails s` to fire up the development server
+4. Navigate to `localhost:3000`
+5. Run `rspec` to run the test suite
 
